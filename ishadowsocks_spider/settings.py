@@ -11,6 +11,12 @@
 
 BOT_NAME = 'ishadowsocks_spider'
 
+DOWNLOAD_HANDLERS = {'s3': None,}
+
+ITEM_PIPELINES = {
+    'ishadowsocks_spider.pipelines.IshadowsocksSpiderPipeline': 200,
+}
+
 SPIDER_MODULES = ['ishadowsocks_spider.spiders']
 NEWSPIDER_MODULE = 'ishadowsocks_spider.spiders'
 

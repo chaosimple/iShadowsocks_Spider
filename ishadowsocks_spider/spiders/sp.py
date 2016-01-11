@@ -24,12 +24,13 @@ class SSSpider(BaseSpider):
         """
         
         """
-        ss=response.xpath('//div[@class="col-lg-4 text-center"]')
+        ss=response.xpath('//section[@id="free"]/div/div/div[@class="col-lg-4 text-center"]')
         si=IShadowsocksSpiderItem()
         for s in ss:
-            si.Server=s.xpath('h4').extract()[0]
-            si.Port=s.xpath('h4').extract()[1]
-        
+            si['Server']=s.xpath('h4/text()').extract()[0].split(":")[1]
+            si['Port']=s.xpath('h4/text()').extract()[1].split(":")[1]
+            si['Password']=s.xpath('h4/text()').extract()[2].split(":")[1]
+        yield si    
     
 
 if __name__ == '__main__':
