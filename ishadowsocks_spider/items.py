@@ -6,6 +6,7 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy import Field
 
 
 
@@ -13,6 +14,6 @@ class IShadowsocksSpiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     #pass
-    Server=scrapy.Field()
-    Port=scrapy.Field()
-    Password=scrapy.Field()
+    Server=Field()
+    Port=Field()
+    Password=Field()
