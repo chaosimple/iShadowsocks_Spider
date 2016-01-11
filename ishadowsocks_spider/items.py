@@ -14,6 +14,7 @@ class IShadowsocksSpiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     #pass
-    Server=Field()
-    Port=Field()
-    Password=Field()
+    server=Field()
+    port=Field()
+    password=Field()
+    method = Field()
