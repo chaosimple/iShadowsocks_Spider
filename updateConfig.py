@@ -6,8 +6,8 @@
   Created: 2016/1/10
 """
 
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
+#from scrapy.crawler import CrawlerProcess
+#from scrapy.utils.project import get_project_settings
 import json, os, shutil
 
 configFile = r'D:\Program Files\Shadowsocks\gui-config.json'
@@ -63,7 +63,7 @@ def updateConfig():
 if __name__ == '__main__':
     
     #从网上爬取数据
-    crawl_Info()
+    #crawl_Info()
     #更新配置文件
     updateConfig()
     
