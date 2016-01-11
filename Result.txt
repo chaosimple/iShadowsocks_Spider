@@ -1,3 +1,0 @@
-Server   : jp3.iss.tf
-Port     : 443
-Password : 56662367
