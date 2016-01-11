@@ -1,7 +1,7 @@
 # SS_Spider
 该系统使用scrapy框架爬取ishadowsocks网站上的服务器、端口和密码等信息。
 
-通过运行updateConfig.py脚本可以自动从http://www.ishadowsocks.com/网站上爬取免费的账号信息，并更新到软件的配置文件中（需要在updateConfig.py中设置软件的配置文件目录项：configFile ）。
+通过运行updateConfig.py脚本可以自动从[网站](http://www.ishadowsocks.com/)上爬取免费的账号信息，并更新到软件的配置文件中（需要在updateConfig.py中设置软件的配置文件目录项：configFile ）。
 
 ---
 ### 更新历史
