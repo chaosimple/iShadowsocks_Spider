@@ -24,8 +24,11 @@ class SSSpider(BaseSpider):
         """
         
         """
-        # 只抓取服务器A的信息
-        ss=response.xpath('//section[@id="free"]/div/div/div[@class="col-lg-4 text-center"]')[0]
+        # 随机选取一个服务器的信息
+        import random
+        serverID=random.choice([0,1,2])
+        
+        ss=response.xpath('//section[@id="free"]/div/div/div[@class="col-lg-4 text-center"]')[serverID]
         si=IShadowsocksSpiderItem()
         si['server']=ss.xpath('h4/text()').extract()[0].split(":")[1]
         si['port']=ss.xpath('h4/text()').extract()[1].split(":")[1]
